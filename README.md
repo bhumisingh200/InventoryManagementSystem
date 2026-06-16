@@ -7,7 +7,7 @@ Goal:CRUD operations for products (add, delete, update, view) with backend datab
 <br>
 Tools Used: Java Swing, JDBC, MySQL
 <br>
-Features that will make your project impressive
+Features that will make my project impressive
 1. Login System 🔐
 2. Search Functionality 🔍
 3. Product Categories 📦

@@ -6,6 +6,8 @@ import model.Product;
 
 public class InventoryService {
 
+    private static final int LOW_STOCK_LIMIT = 10; //Low Stock Alert with logic (static final)
+
     private ArrayList<Product> products =new ArrayList<>();
 
     //To add a new product to the inventory
@@ -24,17 +26,17 @@ public class InventoryService {
 
     //To view all products in the inventory
     public void viewProducts() {
-        System.out.println("\n----- PRODUCT LIST -----");
+        System.out.println("\n===== PRODUCT LIST =====");
         for(Product p : products) {
                  System.out.println(
                     "ID: " + p.getId()
-                    + " | Name: " + p.getName()
-                    + " | Category: " + p.getCategory()
-                    + " | Price: " + p.getPrice()
-                    + " | Quantity: " + p.getQuantity());
+                    + " || Name: " + p.getName()
+                    + " ||Category: " + p.getCategory()
+                    + " || Price: " + p.getPrice()
+                    + " || Quantity: " + p.getQuantity());
 
-                    if(p.getQuantity() < 10){
-                        System.out.println("⚠ LOW STOCK");
+                    if(p.getQuantity() < LOW_STOCK_LIMIT){
+                        System.out.print("⚠ LOW STOCK ALERT");
                     }
         }
     }
@@ -87,4 +89,30 @@ public class InventoryService {
             }
             System.out.println("Product not found!");
     }
+
+    //Total Product, Total Value & Highest Stock Product
+    public void inventoryStats() {
+        //To calculate no. of product
+        int totalProducts = products.size();
+        //initial value
+        double totalValue = 0;
+        //initial
+        Product highestStockProduct = null;
+        
+        
+        for(Product p : products) {
+            totalValue += p.getPrice() * p.getQuantity();
+            if(highestStockProduct == null || p.getQuantity() > highestStockProduct.getQuantity()) {
+                 highestStockProduct = p;
+                }
+        }
+        System.out.println("\n===== INVENTORY STATS =====");
+        System.out.println("Total Products: " + totalProducts);
+        System.out.println("Total Inventory Value: ₹" + totalValue);
+        
+        if(highestStockProduct != null) {
+            System.out.println(
+                "Highest Stock Product: "+ highestStockProduct.getName()+ " ("+highestStockProduct.getQuantity()+ " units)");
+    }
+}
 }

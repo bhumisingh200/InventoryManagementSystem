@@ -10,7 +10,7 @@ public class Main {
         System.out.print("Enter your name: ");
 
         String name = sc.nextLine();
-        System.out.println("Welcome " + name + " to the Inventory Management System!");
+        System.out.println("Welcome " + name + " to the Inventory Management System!!!");
 
         boolean running=true;
         InventoryService inventory =new InventoryService();
@@ -21,9 +21,10 @@ public class Main {
             System.out.println("3. Search Product");
             System.out.println("4. Update Product");
             System.out.println("5. Delete Product");
-            System.out.println("6. Exit");
+            System.out.println("6. Inventory Statistics");
+            System.out.println("7. Exit");
 
-            System.out.println("Enter Your Choice");
+            System.out.print("Enter Your Choice: ");
             int choice = sc.nextInt();
             
             switch(choice) {
@@ -86,6 +87,11 @@ public class Main {
                     break;
 
                 case 6:
+                    inventory.inventoryStats();
+                    break;
+
+
+                case 7:
                     running=false;
                     System.out.println("Exiting...");
                     break;

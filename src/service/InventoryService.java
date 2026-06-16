@@ -12,6 +12,7 @@ public class InventoryService {
     public void addProduct(Product product) {
 
         for(Product p : products){
+            //To prevent dublicate ID
             if(p.getId() == product.getId()){
                 System.out.println("Product ID already exists!");
                 return;
@@ -31,6 +32,10 @@ public class InventoryService {
                     + " | Category: " + p.getCategory()
                     + " | Price: " + p.getPrice()
                     + " | Quantity: " + p.getQuantity());
+
+                    if(p.getQuantity() < 10){
+                        System.out.println("⚠ LOW STOCK");
+                    }
         }
     }
 

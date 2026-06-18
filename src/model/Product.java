@@ -21,7 +21,7 @@ public class Product {
         this.quantity = quantity;
     }
 
-    //
+    //To fetch the product detail
     public int getId() {
         return id;
     }
@@ -42,6 +42,7 @@ public class Product {
         return quantity;
     }
 
+    //To send the product detail
     public void setName(String name) {
         this.name = name;
     }

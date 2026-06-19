@@ -1,25 +1,30 @@
-# 📦 Inventory Management System
+# 🚀 OutriX Inventory Management System (ERP)
 
-A Java Swing + JDBC based Inventory Management System designed to streamline inventory tracking, product management, and employee operations through role-based access control.
+A premium desktop ERP application built using **Java Swing, JDBC, and MySQL**. The system streamlines inventory management, sales tracking, employee operations, and reporting through a modern GUI with secure role-based access control.
 
 ---
 
-## 🚀 Features
+## ✨ Features
+
+### 🔐 Authentication & Security
+
+* Secure Login System
+* Role-Based Access Control (Admin & Employee)
+* Change Password Functionality
+* Activity & Audit Logs
 
 ### 👨‍💼 Admin Panel
 
-* ➕ Add New Products
-* ✏️ Update Product Details
-* ❌ Delete Products
-* 🔍 Search Products
-* 📂 Manage Categories
-* 👥 Manage Employees
-* 📊 Dashboard Statistics
-* ⚠️ Low Stock Alerts
-* 📜 Activity Logs
-* 📤 Export Inventory Data
-* 💾 Database Backup & Restore
+* ➕ Add, Update, Delete Products
+* 🔍 Advanced Product Search & Sorting
+* 📂 Category Management
+* 👥 Employee Management
+* 📊 Interactive Dashboard & Analytics
+* ⚠️ Low Stock Monitoring
 * 💰 Sales & Revenue Tracking
+* 📤 Export Inventory Data (CSV / Excel)
+* 💾 Database Backup & Restore
+* 📜 Activity Log Management
 
 ### 👩‍💻 Employee Panel
 
@@ -29,42 +34,66 @@ A Java Swing + JDBC based Inventory Management System designed to streamline inv
 * 🛒 Record Product Sales
 * ⚠️ View Low Stock Products
 * 👤 Manage Personal Profile
-* 🔒 Change Password
+
+### 🧾 Point of Sale (POS)
+
+* Billing Cart System
+* Automatic Stock Deduction
+* PDF Invoice Generation
+* Sales History Tracking
+
+### 📈 Dashboard & Reporting
+
+* Inventory Valuation Metrics
+* Category-wise Charts
+* Interactive Filters
+* Recent Activity Overview
+* Custom Java 2D Visualizations
+
+### 🎨 User Experience
+
+* 🌙 Light / Dark Theme Support
+* 🖼 Product Image Uploads
+* 📱 Responsive Swing Interface
+* Real-Time Search Filtering
 
 ---
 
 ## 🛠️ Technologies Used
 
 * ☕ Java
-* 🖥️ Java Swing
-* 🗄️ MySQL
+* 🖥 Java Swing
+* 🗄 MySQL
 * 🔌 JDBC
 * 🎯 Object-Oriented Programming (OOP)
+* 🎨 FlatLaf (Modern UI Themes)
+* 📄 PDF Generation
+* 📊 Java 2D Graphics
 
 ---
 
-## 📊 Additional Features
 
-* 🔐 Secure Login System
-* 🎭 Role-Based Access Control (Admin & Employee)
-* 📈 Inventory Analytics Dashboard
-* ⚠️ Real-Time Low Stock Monitoring
-* 📜 Activity Tracking System
-* 💰 Sales Management
-* 📤 Data Export Functionality
-* 🗃️ Database Integration with MySQL
+## 📦 Database Setup
 
----
+### Option A: Automatic Setup (Recommended)
 
-## 📂 Project Structure
+1. Ensure MySQL Server is running.
+2. Update database credentials in `src/database/DBConnection.java`.
+3. Launch the application.
+4. The system automatically creates:
 
-src/
-├── model/
-├── service/
-├── dao/
-├── ui/
-├── database/
-└── Main.java
+   * `inventory_db`
+   * Users table
+   * Products table
+   * Sales table
+   * Activity logs table
+
+### Default Credentials
+
+| Username | Password | Role     |
+| -------- | -------- | -------- |
+| admin    | admin123 | Admin    |
+| employee | emp123   | Employee |
 
 ---
 
@@ -72,49 +101,50 @@ src/
 
 ### Method 1: Using PowerShell
 
-1. Open PowerShell in the project folder.
-2. Run:
+```powershell
 javac -cp "lib/*" -d out src/database/*.java src/model/*.java src/service/*.java src/controller/*.java src/ui/*.java
-java -cp "out;lib/*" ui.Main
 
+java -cp "out;lib/*" ui.App
+```
+
+### Method 2: Using run.bat
+
+1. Right-click `run.bat`
+2. Click **Open**
+3. Select **Option 1 – Start Inventory Management System**
+4. Login and start managing inventory 🚀
 
 ---
 
-### Method 2: Using Run.bat
+## 🎓 Learning Outcomes
 
-1. Right-click on `run.bat`.
-2. Click **Open**.
-3. Select **Option 1 - Start Inventory Management System**.
-4. Login and start managing inventory! 🚀
+Through this project, I gained hands-on experience in:
 
----
-
-## 🎯 Learning Outcomes
-
-This project helped me gain practical experience in:
-
-* Object-Oriented Programming
+* Object-Oriented Programming (OOP)
 * Java Swing GUI Development
-* JDBC Connectivity
-* MySQL Database Management
+* JDBC Database Connectivity
+* MySQL Database Design
 * CRUD Operations
 * Role-Based Authentication
 * Event Handling
-* Software Design Principles
+* File Handling & Data Export
+* PDF Generation
+* Software Architecture & Design Principles
 
 ---
 
-## 🌟 Future Enhancements
+## 🔮 Future Enhancements
 
-* 🌐 Web-Based Version using Spring Boot
+* 🌐 Web Version using Spring Boot
 * 📱 Mobile Application Support
 * 📷 QR Code Product Tracking
 * ☁️ Cloud Database Integration
 * 📧 Email Notifications for Low Stock
-* 📊 Advanced Analytics Dashboard
+* 📊 Advanced Business Analytics
+* 🔔 Real-Time Inventory Alerts
 
 ---
 
 ### 💡 "Efficient inventory management is the backbone of every successful business."
 
-Made with ☕ Java and lots of debugging 😄
+Made with ☕ Java, JDBC, MySQL, and lots of debugging 😄

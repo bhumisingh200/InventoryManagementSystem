@@ -1,7 +1,6 @@
-// This class represents a product in the inventory with attributes like id, name, category, price, and quantity.
+// This class represents a product in the inventory with attributes like id, name, category, price, quantity, and image path.
 package model;
 
-// This class represents a product in the inventory with attributes like id, name, category, price, and quantity.
 public class Product {
 
     private int id;
@@ -9,19 +8,23 @@ public class Product {
     private String category;
     private double price;
     private int quantity;
+    private String imagePath;
 
-    // Constructor to initialize the product attributes
-    public Product(int id, String name, String category,
-                   double price, int quantity) {
+    // Constructors
+    public Product(int id, String name, String category, double price, int quantity) {
+        this(id, name, category, price, quantity, null);
+    }
 
+    public Product(int id, String name, String category, double price, int quantity, String imagePath) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.price = price;
         this.quantity = quantity;
+        this.imagePath = imagePath;
     }
 
-    //To fetch the product detail
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -42,7 +45,10 @@ public class Product {
         return quantity;
     }
 
-    //To send the product detail
+    public String getImagePath() {
+        return imagePath;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -57,5 +63,9 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

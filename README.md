@@ -154,7 +154,7 @@ Through this project, I gained hands-on experience in:
 ![Login](screenshots/AdminInterface.png)
 
 ### Billing
-![Point of Sale & Billing] (screenshots/Billing.png)
+![Point of Sale & Billing](screenshots/Billing.png)
 
 ### Dark Mode Feature
 ![Dark Mode Feature](screenshots/DarkMode.png)

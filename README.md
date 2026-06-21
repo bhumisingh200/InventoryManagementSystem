@@ -145,6 +145,38 @@ Through this project, I gained hands-on experience in:
 
 ---
 
+## 📸 Screenshots
+
+### Login Page
+![Login](screenshots/LoginPage.png)
+
+### Admin Interface
+![Login](screenshots/AdminInterface.png)
+
+### Billing
+![Point of Sale & Billing] (screenshots/Billing.png)
+
+### Dark Mode Feature
+![Dark Mode Feature](screenshots/DarkMode.png)
+
+### Employee Interface
+![Search](screenshots/EmployeeInerface.png)
+
+### Inventory Excel
+![Inventory Excel](screenshots/InventoryExcel.png)
+
+### Invoice Generation PDF
+![Invoice Generation](screenshots/InvoiceGeneration.png)
+
+### Product List
+![Product List](screenshots/ProductsList.png)
+
+ ### Restock Request Feature
+![Restock Request](screenshots/RestockRequest.png)
+
+### Sales Tracking Feature
+![Sales Tracking](screenshots/SalesTracking.png)
+
 ### 💡 "Efficient inventory management is the backbone of every successful business."
 
 Made with ☕ Java, JDBC, MySQL, and lots of debugging 😄
